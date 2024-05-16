@@ -1,0 +1,484 @@
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) { 
+  /* Aquí puedes agregar estilos específicos para dispositivos móviles si es necesario */
+}
+
+body {
+  margin-top: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+/*Portadaaaaaaaa de sobre nosotros*/
+
+.portadamotogp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ocupa todo el ancho horizontal disponible */
+  height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción de aspecto */
+  max-width: 100%; /* Ajusta el tamaño máximo de la imagen al contenedor */
+  max-height: 100%; /* Ajusta el tamaño máximo de la imagen al contenedor */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde del contenedor */
+}
+
+.portadamotogp img {
+  width: 100%; /* Ocupa todo el ancho del contenedor padre */
+  height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción de aspecto */
+}
+
+
+
+/*Portadaaaaaaaa de sobre nosotros*/
+
+
+
+
+
+
+
+
+
+/* Estilos de los elementos */
+.items {
+  background-color: #000000;
+  display: flex;
+  gap: var(--gap);
+  justify-content: center;
+  gap: 50px;
+  border-radius: 30px 30px 30px 30px;
+  padding: 200px;
+  margin: 200px 20px;
+}
+
+/* Estilo para las imágenes */
+.items img {
+  width: calc(
+    100% / var(--item-count) - var(--gap)
+  ); /* Calcula el ancho de cada imagen */
+  max-width: 30%; /* Garantiza que las imágenes no se agranden más allá de su tamaño original */
+  height: auto; /* Mantiene la proporción de aspecto de las imágenes */
+  border-radius: 40px 20px 40px 20px;
+}
+
+
+
+
+.logo {
+  height: 40px;
+  padding-left: 20px;
+ }
+
+
+
+header nav ul {
+  background-color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-align: center;
+  padding: 10px;
+  margin: unset;
+  text-decoration: none;
+  list-style-type: none;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+}
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li button {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 20px;
+  padding: 10px 30px;
+  color: white;
+  border: none;
+  border-radius: 10px 10px 10px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+nav ul li button:hover {
+  background-color: black;
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+
+/*BARRA DE NAVEGACIONNNNNNNNNNNN*/
+
+.bg-dark {
+  --bs-bg-opacity: 1;
+  background-color: rgb(0 0 0) !important;
+}
+
+
+
+
+
+
+
+/*BARRA DE NAVEGACIONNNNNNNNNNNN*/
+
+
+
+/*CAJA DEPORTIVA HTML*/
+
+
+.sports-box{
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  align-items: center; /* Alinea verticalmente los elementos */
+  margin-bottom: 20px; /* Espacio entre cada conjunto de imagen y descripción */
+}
+
+.sports-box img {
+  width: 100%; /* Ancho de la imagen */
+  max-width: 500px; /* Ancho máximo de la imagen */
+  margin-right: 20px; /* Espacio entre la imagen y la descripción */
+}
+
+/* CAJA DEPORTIVA HTML */
+
+
+/*SOBRE NOSOTROSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS*/
+
+
+.image-with-description {
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  align-items: center; /* Alinea verticalmente los elementos */
+  margin-bottom: 20px; /* Espacio entre cada conjunto de imagen y descripción */
+}
+
+.image-with-description img {
+  width: 200%; /* Ancho de la imagen */
+  max-width: 500px; /* Ancho máximo de la imagen */
+  margin-right: 20px; /* Espacio entre la imagen y la descripción */
+}
+
+.description {
+  flex: 1; /* La descripción ocupa todo el espacio restante */
+}
+
+.description h3 {
+  margin-top: 0; /* Elimina el margen superior predeterminado */
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .image-with-description {
+        flex-direction: column; /* Cambia la dirección del flexbox a column para móviles */
+    }
+
+    .image-with-description img {
+        width: 100%; /* La imagen ocupa todo el ancho disponible en dispositivos móviles */
+        margin-right: 0; /* Elimina el margen derecho en dispositivos móviles */
+        margin-bottom: 10px; /* Espacio entre la imagen y la descripción en dispositivos móviles */
+    }
+}
+/*SOBRE NOSOTROSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS*/
+/* Estilos adicionales según sea necesario */
+
+
+
+
+
+
+/* Efecto de texto al pasar el cursor */
+.about-item:hover::after {
+  content: "Click para más información";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-item:hover::after {
+  opacity: 1;
+  cursor: pointer;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: monospace;
+  font-size: 2em;
+  text-align: center;
+  color: whitesmoke;
+}
+
+/*CAJA DEPORTIVA HTML*/
+
+
+/*IMAGEN INICIO DESCRIPTION*/
+
+
+
+
+
+
+
+
+
+/*TEXTO DE INICIO*/
+h8 {
+  font-family: monospace;
+  font-size: 2em;
+  text-align: center;
+  color: whitesmoke;
+  margin-top: 20px; /* Añade un margen en la parte superior */
+}
+
+
+h7 {
+  text-transform: uppercase;
+  font-family: monospace;
+  font-size: 4em;
+  text-align: center;
+  color: whitesmoke;
+  margin-bottom: 20px; /* Añade un margen en la parte inferior */
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  h8 {
+    font-size: 1.2em; /* Tamaño aún más pequeño para dispositivos móviles */
+    margin-top: 5px; /* Margen superior aún más reducido para dispositivos móviles */
+  }
+
+  h7 {
+    font-size: 2em; /* Tamaño aún más pequeño para dispositivos móviles */
+    margin-bottom: 5px; /* Margen inferior aún más reducido para dispositivos móviles */
+  }
+}
+
+/*TEXTO DE INICIO*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*IMAGEN INICIO DESCRIPTION*/
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no hay suficiente espacio */
+}
+
+.image-box {
+  color: whitesmoke;
+  margin: 0 auto; /* Centra los elementos horizontalmente */
+  text-align: center;
+  width: 100%; /* Ocupa todo el ancho disponible en dispositivos más pequeños */
+  box-sizing: border-box; /* Incluye el padding y el border en el ancho total */
+}
+
+.image-box img {
+  max-width: 100%; /* La imagen se ajustará al ancho del contenedor padre */
+  height: auto;
+}
+
+.description {
+  color: whitesmoke;
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .image-box {
+    width: 50%; /* Mostrar dos imágenes por fila en dispositivos móviles */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .image-box {
+      width: 33.33%; /* Mostrar tres imágenes por fila en dispositivos más grandes */
+      max-width: none; /* Restaurar el ancho máximo a su valor predeterminado */
+  }
+}
+
+
+/*IMAGEN INICIO DESCRIPTION*/
+
+
+
+
+
+
+
+
+
+
+/* EDICION FOOOOOOTEEEEER*/
+
+a {
+  color: #ff0000;
+}
+
+
+
+
+
+/* EDICION FOOOOOOTEEEEER*/
+
+
+
+
+
+/*foterrrrrrrrrr*/
+
+
+.footer-container {
+  position: relative;
+  background-image: url('../img/footer-bg3.png');
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el fondo */
+  padding: 20px;
+  
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    background-image: url('../img/footer-bg3.png'); /* Cambia la imagen para dispositivos móviles si es necesario */
+  }
+}
+.footer-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+  color: #ccc;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-container form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-container input[type="email"] {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.footer-container button[type="submit"] {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+/*foterrrrrrrrrr*/
+
+
+
+/*MAINNNNNN*/
+
+  /* Estilos para el contenedor principal */
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Estilos para las imágenes */
+  .image-cady {
+    width: calc(30% - 10px); /* Ajustar según el número de imágenes por fila */
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden; /* Para ocultar la descripción inicialmente */
+    transition: all 0.3s ease; /* Transición para la animación */
+  }
+
+  .image-cady img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; /* Transición para la animación */
+  }
+
+  /* Estilos para la descripción */
+  .image-cady .description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Animación al hacer hover sobre la imagen */
+  .image-cady:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen */
+  }
+
+  .image-cady:hover img {
+    transform: translateY(-10%); /* Desplaza ligeramente la imagen hacia arriba */
+  }
+
+  .image-cady:hover .description {
+    opacity: 1; /* Hace visible la descripción */
+  }
+
+/*MAINNNNNN*/
+
+
+
+  
+
+
+
+
+
+
